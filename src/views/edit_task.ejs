@@ -1,0 +1,20 @@
+<%- include('./header.ejs') %>
+
+<h1 class="text-center mb-3">Editar tarea</h1>
+
+<form action="/api/edit-task" method="POST" class="col-6">
+    <input type="hidden" name="taskId" value="<%= task._id %>">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Título" name="title" value="<%= task.title %>" maxlength="17">
+        <label for="floatingInput">Título</label>
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Describe la tarea" id="floatingTextarea2" style="height: 100px; resize: none;" name="bodyTask"><%= task.bodyTask %></textarea>
+        <label for="floatingTextarea2">Describe la tarea</label>
+    </div>
+    <div class="d-grid gap-2 my-4">
+        <button class="btn btn-outline-primary" type="submit">Editar tarea</button>
+    </div>
+</form>
+
+<%- include('./footer.ejs') %>

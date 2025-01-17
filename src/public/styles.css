@@ -1,0 +1,11 @@
+.content{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-body > .text-content{
+    height: 168px;
+    overflow-y: auto !important;
+}
