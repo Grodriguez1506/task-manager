@@ -4,6 +4,12 @@ import auppRoutes from "./routes/app.routes.js";
 import taskRoutes from "./routes/task.routes.js";
 import { connectDb } from "./db.js";
 import cookieParser from "cookie-parser";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Ruta del archivo actual
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 connectDb();
 
@@ -14,7 +20,8 @@ app.set("port", 3000);
 
 // Configuración EJS como motor de plantilla
 app.set("view engine", "ejs");
-app.set("views", "./src/views");
+app.set("views", path.join(__dirname, "views"));
+// app.set("views", "./src/views");
 
 // Configuración de archivos estaticos
 app.use(express.static("./src/public"));

@@ -62,12 +62,3 @@ export const logout = (req, res) => {
     res.send("Error en loggeo");
   }
 };
-
-// export const profile = async (req, res) => {
-//   const userFound = await User.findById(req.user.id);
-
-//   return res.render("profile", {
-//     title: `Perfil de usuario ${userFound.email}`,
-//     usuario: userFound,
-//   });
-// };
