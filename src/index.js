@@ -24,7 +24,7 @@ app.set("views", path.join(__dirname, "views"));
 // app.set("views", "./src/views");
 
 // Configuración de archivos estaticos
-app.use(express.static("./src/public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Middleware para analizar y recibir datos desde formularios
 app.use(express.urlencoded({ extended: true }));
