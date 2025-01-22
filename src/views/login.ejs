@@ -2,7 +2,8 @@
 
 <h1 class="text-center my-3">Inicia sesión</h1>
 
-<form action="/api/login" method="POST" class="col-6">
+<form id="loginForm" class="col-6">
+    <div class="loginError error"></div>
     <div class="form-floating mb-3">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
         <label for="floatingInput">Email address</label>
